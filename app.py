@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 
 def predict(data):
-    clf = joblib.load("rf_model.sav")
+    clf = joblib.load("rf_model.sav", mmap_mode='r')
     return clf.predict(data)
 
 # Function to map classes to images
